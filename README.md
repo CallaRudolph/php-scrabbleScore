@@ -1,5 +1,5 @@
 1. The program will reject special characters, numbers, and spaces.
-  * Input: "ca$h 1"
+  * Input: "ca%h 1"
   * Output: "special characters, numbers, or spaces not accepted"
 2. The program will convert uppercase characters into lowercase characters.
   * Input: "Apple"
