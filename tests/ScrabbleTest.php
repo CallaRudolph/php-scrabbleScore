@@ -12,5 +12,15 @@
 
             $this->assertEquals("error", $result);
         }
+
+        function testScrabbleScoreCase()
+        {
+          $test_Scrabble = new Scrabble;
+          $input = "Cat";
+
+          $result = $test_Scrabble->scrabbleScore($input);
+
+          $this->assertEquals("cat", $result);
+        }
     }
 ?>
