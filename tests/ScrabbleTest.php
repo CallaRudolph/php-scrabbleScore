@@ -32,5 +32,15 @@
 
             $this->assertEquals("3", $result);
         }
+
+        function testScrabbleScoreMultipleLetters()
+        {
+            $test_Scrabble = new Scrabble;
+            $input = "Cat";
+
+            $result = $test_Scrabble->scrabbleScore($input);
+
+            $this->assertEquals("5", $result);
+        }
     }
 ?>
