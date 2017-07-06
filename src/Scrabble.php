@@ -79,7 +79,7 @@
                   $this->score = 10;
                   array_push($score_array, $this->score);
               }
-              
+
             $final_score = array_sum($score_array);
             return $final_score;
         }
