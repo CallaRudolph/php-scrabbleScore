@@ -50,8 +50,7 @@
 
             $result = $test_Scrabble->scrabbleFinal($input);
 
-            $this->assertEquals([5], $result);
-
+            $this->assertEquals("5", $result);
         }
     }
 ?>
