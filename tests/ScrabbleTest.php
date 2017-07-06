@@ -15,12 +15,22 @@
 
         function testScrabbleScoreCase()
         {
-          $test_Scrabble = new Scrabble;
-          $input = "Cat";
+            $test_Scrabble = new Scrabble;
+            $input = "Cat";
 
-          $result = $test_Scrabble->scrabbleScore($input);
+            $result = $test_Scrabble->scrabbleScore($input);
 
-          $this->assertEquals("cat", $result);
+            $this->assertEquals("cat", $result);
+        }
+        
+        function testScrabbleScoreOneLetter()
+        {
+            $test_Scrabble = new Scrabble;
+            $input = "a";
+
+            $result = $test_Scrabble->scrabbleScore($input);
+
+            $this->assertEquals("1", $result);
         }
     }
 ?>
