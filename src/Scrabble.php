@@ -49,5 +49,11 @@
                 }
             return $score_array;
         }
+
+        function scrabbleFinal($input)
+        {
+          
+        }
+
     }
 ?>

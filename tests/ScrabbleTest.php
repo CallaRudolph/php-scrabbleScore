@@ -42,5 +42,16 @@
 
             $this->assertEquals([3, 1, 1], $result);
         }
+
+        function testScrabbleScoreFinal()
+        {
+            $test_Scrabble = new Scrabble;
+            $input = "Cat";
+
+            $result = $test_Scrabble->scrabbleFinal($input);
+
+            $this->assertEquals([5], $result);
+
+        }
     }
 ?>
