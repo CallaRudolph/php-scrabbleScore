@@ -28,17 +28,17 @@
             $test_Scrabble = new Scrabble;
             $input = "Cat";
 
-            $result = $test_Scrabble->scrabbleFinal($input);
+            $result = $test_Scrabble->scrabbleScore($input);
 
             $this->assertEquals(5, $result);
         }
 
-        function testScrabbleScoreFinal()
+        function testScrabbleScoreError()
         {
             $test_Scrabble = new Scrabble;
             $input = "Ca$";
 
-            $result = $test_Scrabble->scrabbleFinal($input);
+            $result = $test_Scrabble->scrabbleScore($input);
 
             $this->assertEquals("Please input one word that does not have numbers or special characters", $result);
         }

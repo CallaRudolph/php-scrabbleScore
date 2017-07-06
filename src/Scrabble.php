@@ -25,14 +25,14 @@
 
         function scrabbleScore($input)
         {
-            $input_lower = $this->scrabbleError($input);
-            $this->score = strtolower($input);
+            $filter = $this->scrabbleError($input);
             $score_array = [];
-            $array_of_letters = str_split($input_lower);
             if ($filter == false) {
                 $error = "Please input one word that does not have numbers or special characters";
                 return $error;
             } else {
+                $input_lower = strtolower($input);
+                $array_of_letters = str_split($input_lower);
                 foreach ($array_of_letters as $letter) {
                     if ($letter == 'a' || $letter == 'e' || $letter == 'i' || $letter == 'o' || $letter == 'u' || $letter == 'l' || $letter == 'n' || $letter == 'r' || $letter == 's' || $letter == 't') {
                         $this->score = 1;
@@ -57,15 +57,16 @@
                         array_push($score_array, $this->score);
                     }
                 }
+                $final_score = array_sum($score_array);
+                return $final_score;
             }
-            return $score_array;
         }
-
-        function scrabbleFinal($input)
-        {
-            $score_array = $this->scrabbleScore($input);
-            $final_score = array_sum($score_array);
-            return $final_score;
-        }
+        //
+        // function scrabbleFinal($input)
+        // {
+        //     $score_array = $this->scrabbleScore($input);
+        //     $final_score = array_sum($score_array);
+        //     return $final_score;
+        // }
     }
 ?>
