@@ -1,12 +1,12 @@
-1. The program will reject special characters, numbers, and spaces.
+1. The program can return the score for a single lowercased letter.
+  * Input: "a"
+  * Output: 1
+2. The program can return the combined score for a lowercased multiple-letter string input.
+  * Input: "best"
+  * Output: 6
+3. The program will take a multi-cased input word and output a score.
+  * Input: "Cat"
+  * Output: 5
+4. The program will reject special characters, numbers, and spaces and return an error message.
   * Input: "ca%h 1"
   * Output: "special characters, numbers, or spaces not accepted"
-2. The program will convert uppercase characters into lowercase characters.
-  * Input: "Apple"
-  * Output: "apple"
-3. The program can return the score for a single-letter string input.
-  * Input: "a"
-  * Output: "score: 1"
-4. The program can return the combined score for a multiple-letter string input.
-  * Input: "best"
-  * Output: "score: 6"

@@ -3,44 +3,24 @@
 
     class ScrabbleTest extends PHPUnit_Framework_TestCase
     {
-        function testScrabbleScoreError()
-        {
-            $test_Scrabble = new Scrabble;
-            $input = "ca3";
-
-            $result = $test_Scrabble->scrabbleError($input);
-
-            $this->assertEquals("error", $result);
-        }
-
-        function testScrabbleScoreCase()
-        {
-            $test_Scrabble = new Scrabble;
-            $input = "C";
-
-            $result = $test_Scrabble->scrabbleCase($input);
-
-            $this->assertEquals("c", $result);
-        }
-
         function testScrabbleScoreOneLetter()
         {
             $test_Scrabble = new Scrabble;
-            $input = "C";
+            $input = "c";
 
             $result = $test_Scrabble->scrabbleScore($input);
 
-            $this->assertEquals([3], $result);
+            $this->assertEquals(3, $result);
         }
 
         function testScrabbleScoreMultipleLetters()
         {
             $test_Scrabble = new Scrabble;
-            $input = "Cat";
+            $input = "cat";
 
             $result = $test_Scrabble->scrabbleScore($input);
 
-            $this->assertEquals([3, 1, 1], $result);
+            $this->assertEquals(5, $result);
         }
 
         function testScrabbleScoreFinal()
@@ -50,7 +30,17 @@
 
             $result = $test_Scrabble->scrabbleFinal($input);
 
-            $this->assertEquals("5", $result);
+            $this->assertEquals(5, $result);
+        }
+
+        function testScrabbleScoreFinal()
+        {
+            $test_Scrabble = new Scrabble;
+            $input = "Ca$";
+
+            $result = $test_Scrabble->scrabbleFinal($input);
+
+            $this->assertEquals("Please input one word that does not have numbers or special characters", $result);
         }
     }
 ?>
