@@ -8,7 +8,7 @@
             $test_Scrabble = new Scrabble;
             $input = "ca3";
 
-            $result = $test_Scrabble->scrabbleScore($input);
+            $result = $test_Scrabble->scrabbleError($input);
 
             $this->assertEquals("error", $result);
         }
@@ -16,21 +16,21 @@
         function testScrabbleScoreCase()
         {
             $test_Scrabble = new Scrabble;
-            $input = "Cat";
+            $input = "C";
 
-            $result = $test_Scrabble->scrabbleScore($input);
+            $result = $test_Scrabble->scrabbleCase($input);
 
-            $this->assertEquals("cat", $result);
+            $this->assertEquals("c", $result);
         }
-        
+
         function testScrabbleScoreOneLetter()
         {
             $test_Scrabble = new Scrabble;
-            $input = "a";
+            $input = "C";
 
             $result = $test_Scrabble->scrabbleScore($input);
 
-            $this->assertEquals("1", $result);
+            $this->assertEquals("3", $result);
         }
     }
 ?>
