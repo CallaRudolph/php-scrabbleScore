@@ -5,10 +5,13 @@
         {
             $answer = "";
             if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $input) || (preg_match('/\\d/', $input)) || (preg_match('/\s/', $input)))
-                {
-                    $answer = "error";
-                }
+            {
+                $answer = "error";
+            } else {
+                $answer = strtolower($input);
+            }
             return $answer;
         }
+
     }
 ?>

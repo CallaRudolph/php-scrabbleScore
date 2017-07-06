@@ -6,7 +6,7 @@
         function testScrabbleScoreError()
         {
             $test_Scrabble = new Scrabble;
-            $input = "ca#34 d";
+            $input = "ca3";
 
             $result = $test_Scrabble->scrabbleScore($input);
 
