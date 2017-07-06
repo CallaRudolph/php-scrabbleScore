@@ -15,8 +15,8 @@
 
     $app->get("/score", function() use ($app) {
         $scrabble_score = new Scrabble;
-        $final_scrabble_score = $scrabble_score->scrabbleFinal($_GET['input']);
-        return $app['twig']->render('score.html.twig', array('score' => $final_scrabble_score));
+        $final_scrabble_score = $scrabble_score->scrabbleScore($_GET['input']);
+        return $app['twig']->render('score.html.twig', array('score' => $final_scrabble_score, 'input' => $_GET['input']));
     });
 
     return $app;

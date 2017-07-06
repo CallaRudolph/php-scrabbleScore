@@ -12,17 +12,6 @@
             return $filter;
         }
 
-        // function scrabbleCase($input)
-        // {
-        //     if ($filter == false) {
-        //         $error = "Please input one word that does not have numbers or special characters";
-        //         return $error;
-        //     } else {
-        //
-        //         return $this->score;
-        //     }
-        // }
-
         function scrabbleScore($input)
         {
             $filter = $this->scrabbleError($input);
@@ -61,12 +50,5 @@
                 return $final_score;
             }
         }
-        //
-        // function scrabbleFinal($input)
-        // {
-        //     $score_array = $this->scrabbleScore($input);
-        //     $final_score = array_sum($score_array);
-        //     return $final_score;
-        // }
     }
 ?>
