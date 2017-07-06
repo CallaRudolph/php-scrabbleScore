@@ -30,7 +30,7 @@
 
             $result = $test_Scrabble->scrabbleScore($input);
 
-            $this->assertEquals("3", $result);
+            $this->assertEquals([3], $result);
         }
 
         function testScrabbleScoreMultipleLetters()
@@ -40,7 +40,7 @@
 
             $result = $test_Scrabble->scrabbleScore($input);
 
-            $this->assertEquals("5", $result);
+            $this->assertEquals([3, 1, 1], $result);
         }
     }
 ?>

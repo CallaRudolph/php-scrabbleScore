@@ -22,23 +22,32 @@
         function scrabbleScore($input)
         {
             $input_lower = strtolower($input);
-
-            for($i = 0; $i <= $input_lower; $i++)
-                if ($input_lower == 'a' || $input_lower == 'e' || $input_lower == 'i' || $input_lower == 'o' || $input_lower == 'u' || $input_lower == 'l' || $input_lower == 'n' || $input_lower == 'r' || $input_lower == 's' || $input_lower == 't')
+            $score_array = [];
+            $array_of_letters = str_split($input_lower);
+            foreach ($array_of_letters as $letter)
+                if ($letter == 'a' || $letter == 'e' || $letter == 'i' || $letter == 'o' || $letter == 'u' || $letter == 'l' || $letter == 'n' || $letter == 'r' || $letter == 's' || $letter == 't') {
                     $this->score = 1;
-                elseif ($input_lower == 'd' || $input_lower == 'g')
+                    array_push($score_array, $this->score);
+                } elseif ($letter == 'd' || $letter == 'g') {
                     $this->score = 2;
-                elseif ($input_lower == 'b' || $input_lower == 'c' || $input_lower == 'm' || $input_lower == 'p')
+                    array_push($score_array, $this->score);
+                } elseif ($letter == 'b' || $letter == 'c' || $letter == 'm' || $letter == 'p') {
                     $this->score = 3;
-                elseif ($input_lower == 'f' || $input_lower == 'h' || $input_lower == 'v' || $input_lower == 'w' || $input_lower == 'y')
+                    array_push($score_array, $this->score);
+                } elseif ($letter == 'f' || $letter == 'h' || $letter == 'v' || $letter == 'w' || $letter == 'y') {
                     $this->score = 4;
-                elseif ($input_lower == 'k')
+                    array_push($score_array, $this->score);
+                } elseif ($letter == 'k') {
                     $this->score = 5;
-                elseif ($input_lower == 'j' || $input_lower == 'x')
+                    array_push($score_array, $this->score);
+                } elseif ($letter == 'j' || $letter == 'x') {
                     $this->score = 8;
-                else
+                    array_push($score_array, $this->score);
+                } else {
                     $this->score = 10;
-            return $this->score;
+                    array_push($score_array, $this->score);
+                }
+            return $score_array;
         }
     }
 ?>
